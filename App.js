@@ -7,22 +7,23 @@ import cors from "cors";
 import session from "express-session";
 import SessionExercises from "./SessionExercises.js";
 import Users from "./Users/routes.js";
+import Lab5 from "./Lab5.js";
 
 const app = express();
 app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
+    cors({
+        origin: "http://localhost:3000",
+        credentials: true,
+    })
 );
 app.use(express.json());
 app.use(
-  session({
-    secret: "secret",
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: false },
-  })
+    session({
+        secret: "secret",
+        resave: false,
+        saveUninitialized: true,
+        cookie: { secure: false },
+    })
 );
 
 Hello(app);
@@ -30,5 +31,6 @@ Courses(app);
 Modules(app);
 SessionExercises(app);
 Users(app);
+Lab5(app);
 
 app.listen(4000);
