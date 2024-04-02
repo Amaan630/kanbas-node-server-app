@@ -33,4 +33,4 @@ SessionExercises(app);
 Users(app);
 Lab5(app);
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
