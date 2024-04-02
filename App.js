@@ -12,7 +12,7 @@ import Lab5 from "./Lab5.js";
 const app = express();
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "https://a5--splendorous-selkie-55b336.netlify.app",
         credentials: true,
     })
 );
