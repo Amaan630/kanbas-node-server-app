@@ -27,6 +27,11 @@ export default function Quizzes(app) {
             ...req.body,
             _id: Date.now().toString(),
             course: courseId,
+            name: `Quiz ${db.quizzes.length + 1}`,
+            description: "This is a new quiz",
+            dueDate: new Date().toISOString(),
+            availableDate: new Date().toISOString(),
+            availableUntilDate: new Date().toISOString(),
         };
         db.quizzes.push(quiz);
         res.send(quiz);
